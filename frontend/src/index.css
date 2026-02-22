@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-gray-100;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .tool-btn {
+    @apply flex flex-col items-center justify-center p-3 rounded-lg transition-all duration-150;
+  }
+  
+  .tool-btn:hover {
+    @apply bg-gray-800;
+  }
+  
+  .tool-btn.active {
+    @apply bg-accent-600 text-white shadow-lg shadow-accent-600/25;
+  }
+  
+  .panel {
+    @apply bg-gray-900 border border-gray-800 rounded-xl;
+  }
+  
+  .panel-header {
+    @apply px-4 py-3 border-b border-gray-800 font-medium text-sm text-gray-300;
+  }
+  
+  .input-dark {
+    @apply bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-gray-100 
+           focus:outline-none focus:border-accent-500 focus:ring-1 focus:ring-accent-500
+           placeholder-gray-500;
+  }
+  
+  .slider-dark {
+    @apply w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer;
+  }
+  
+  .slider-dark::-webkit-slider-thumb {
+    @apply appearance-none w-4 h-4 bg-accent-500 rounded-full hover:bg-accent-400 transition-colors;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
