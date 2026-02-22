@@ -123,7 +123,7 @@ export default function PropertiesPanel() {
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
                 <span>Sparse</span>
-                <span>{Dense</span>
+                <span>Dense</span>
               </div>
             </div>
 
